@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Mejor Side Event de Devconnect Está en Mendoza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserva tu lugar para el side event más intrigante de Devconnect 2025 en Mendoza. Sólo para los primeros en enterarse.">
+  <style>
+    :root {
+      --main-bg: #000;
+      --main-text: #fff;
+      --secondary-text: #e0e0e0;
+      --cta: #d9534f;
+      --cta-hover: #c9302c;
+      --urgency: #ffeb3b;
+    }
+    body {
+      margin: 0;
+      background: var(--main-bg);
+      color: var(--main-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .banner-urgencia {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(0,0,0,0.75);
+      color: var(--main-text);
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.5em 0;
+      z-index: 20;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid var(--urgency);
+    }
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('mendoza-bg.jpg') center center/cover no-repeat;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 2.5em 1.5em;
+      background: rgba(0,0,0,0.35);
+      border-radius: 1.5em;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3em;
+      letter-spacing: -1px;
+    }
+    .content span {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--urgency);
+      margin-bottom: 1em;
+    }
+    .subtitulo {
+      color: var(--secondary-text);
+      font-size: 1.05rem;
+      margin-bottom: 2em;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+    #email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+      align-items: center;
+      margin-bottom: 1.2em;
+    }
+    #email-form input[type="email"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75em;
+      border-radius: 4px;
+      border: 1px solid #333;
+      font-size: 1rem;
+      background: #191919;
+      color: #fff;
+      outline: none;
+      margin-bottom: 0.6em;
+    }
+    #email-form button {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.85em;
+      border: none;
+      border-radius: 4px;
+      background: var(--cta);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #email-form button:hover {
+      background: var(--cta-hover);
+    }
+    .confirmacion {
+      color: var(--urgency);
+      background: #232323c0;
+      border-radius: 5px;
+      padding: 1em;
+      margin: 1.5em 0 0 0;
+      font-size: 1.12em;
+      display: none;
+    }
+    .valor, .porque {
+      max-width: 520px;
+      margin: 2.5em auto 0 auto;
+      padding: 1.5em 1em;
+      background: rgba(25,25,25,0.8);
+      border-radius: 1em;
+      text-align: center;
+      font-size: 1.13em;
+    }
+    .porque {
+      font-size: 1em;
+      margin-top: 1.2em;
+      color: #c8c8c8;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.98em;
+      color: #aaa;
+      background: #101010;
+      padding: 2em 1em 1.2em 1em;
+      margin-top: 3em;
+      border-radius: 1em 1em 0 0;
+      letter-spacing: 0.01em;
+    }
+    @media (min-width: 600px) {
+      .content h1 { font-size: 3rem; }
+      .content span { font-size: 1.75rem; }
+      .subtitulo { font-size: 1.125rem; }
+      .valor, .porque { font-size: 1.19em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-urgencia">
+    Registro abierto hasta <strong>agotar cupos</strong>
+  </div>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>El Mejor Side Event de Devconnect Está en Mendoza</h1>
+      <span>¡Reserva tu lugar ahora!</span>
+      <p class="subtitulo">Próximamente: una experiencia única para asistentes de Devconnect ARG.<br>¿Te la vas a perder?</p>
+      <form id="email-form" autocomplete="off">
+        <input type="email" placeholder="Tu correo para reservar tu lugar" required>
+        <button type="submit">Quiero mi lugar</button>
+      </form>
+      <div class="confirmacion" id="confirmacion">
+        Gracias. Te avisaremos cuando falte poco para que se abran las inscripciones formales.<br>¡No te quedes afuera!
+      </div>
+    </div>
+  </header>
+  <div class="valor">
+    Descubre la energía de Mendoza. Paisaje, comunidad y tecnología: la combinación perfecta, justo antes o después de Devconnect Buenos Aires.<br>
+    <strong>Cupos muy limitados.</strong>
+  </div>
+  <div class="porque">
+    ¿Por qué Mendoza y Devconnect?<br>
+    Porque a veces, las mejores conexiones ocurren lejos del ruido. Mendoza es el lugar donde comienza algo nuevo.
+  </div>
+  <footer>
+    &copy; 2025 Side Event Devconnect Mendoza. Proyecto independiente.<br>
+    Hecho con <span style="color:#d9534f;">&#10084;</span> desde Mendoza.
+  </footer>
+  <script>
+    const form = document.getElementById('email-form');
+    const confirm = document.getElementById('confirmacion');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      confirm.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
