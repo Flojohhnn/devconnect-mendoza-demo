@@ -1,65 +1,252 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Devconnect en Mendoza</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Extiende la Devconnect entre bodegas y montaña en Mendoza. Deja tu mail y entérate primero.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Extiende la Devconnect entre bodegas y montaña en Mendoza. Deja tu mail y entérate primero."
+  />
+  <!-- ==========================
+       Fuentes nuevas
+  ========================== -->
+  <link
+    href="https://fonts.googleapis.com/css2?
+      family=Cinzel:wght@600;700&
+      family=Lato:ital,wght@0,400;0,700;1,400;1,700&
+      display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ==========================
+       Estilos actualizados
+  ========================== -->
   <style>
-    :root{--main-bg:#000;--main-text:#fff;--cta:#d9534f;--cta-hover:#c9302c;--urgency:#ffeb3b}
-    html,body{height:100%;margin:0;background:var(--main-bg);color:var(--main-text);
-      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
-      overflow:hidden}
-    .hero{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center}
-    .bg-video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:0;
-      filter:brightness(.85) saturate(1.05)}
-    .overlay{position:absolute;top:0;left:0;width:100vw;height:100vh;
-      background:linear-gradient(120deg,rgba(0,0,0,.38) 60%,rgba(30,20,50,.11) 100%);z-index:1}
-    .hero-content{position:relative;z-index:2;width:100%;max-width:360px;margin:0 auto;text-align:center}
-    .hero-title{font-size:2.5rem;font-weight:700;letter-spacing:-2px;margin-bottom:1.1em;text-shadow:0 2px 16px rgba(0,0,0,.22)}
-    .hero-cta{font-size:1.25rem;font-weight:500;margin-bottom:1.8em;color:var(--urgency)}
-    #email-form{display:flex;flex-direction:column;gap:.6em;width:100%}
-    #email-form input[type="email"]{padding:1em 1.2em;font-size:1.07rem;border-radius:2em;border:none;
-      background:rgba(0,0,0,.23);color:var(--main-text);text-align:center}
-    #email-form input[type="email"]:focus{background:rgba(32,9,34,.29)}
-    #email-form button{padding:1em;background:var(--cta);color:#fff;font-weight:600;border:none;border-radius:2em;
-      font-size:1.07rem;cursor:pointer;transition:background .18s,transform .1s}
-    #email-form button:hover,#email-form button:focus{background:var(--cta-hover);transform:scale(1.04)}
-    .urgency-msg{margin-top:.9em;color:var(--urgency);font-size:1rem}
-    .thanks-msg{color:var(--urgency);margin-top:2em;font-size:1.18rem;display:none}
-    .footer{position:absolute;bottom:1.5em;width:100vw;text-align:center;z-index:3;color:#b9b9b9;font-size:1rem;opacity:.8}
-    .footer img{width:32px;height:32px;margin:0 .3em -.7em 0;filter:grayscale(1) brightness(1.1);vertical-align:middle}
-    @media(max-width:700px){.hero-title{font-size:1.3rem}.hero-cta{font-size:1.02rem}.footer{font-size:.91rem}}
+    :root {
+      --main-bg: #000;
+      --main-text: #fff;
+      --accent-terra: #C47E48;
+      --cta: #d9534f;
+      --cta-hover: #c9302c;
+      --urgency-color: #ffeb3b;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--main-bg);
+      color: var(--main-text);
+      font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.85) saturate(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.38) 60%,
+        rgba(30, 20, 50, 0.11) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.22);
+      line-height: 1.1;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 2px;
+      background-color: var(--accent-terra);
+      border: none;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .hero-subtitle {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--main-text);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .hero-urgency {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--accent-terra);
+      margin-bottom: 2rem;
+    }
+
+    #email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+      width: 100%;
+    }
+
+    #email-form input[type='email'] {
+      padding: 1em 1.2em;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.125rem;
+      border-radius: 2em;
+      border: none;
+      background: rgba(0, 0, 0, 0.23);
+      color: var(--main-text);
+      text-align: center;
+    }
+    #email-form input[type='email']:focus {
+      background: rgba(32, 9, 34, 0.29);
+      outline: none;
+    }
+
+    #email-form button {
+      padding: 1em;
+      background: var(--cta);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border: none;
+      border-radius: 2em;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.1s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #email-form button:hover,
+    #email-form button:focus {
+      background: var(--cta-hover);
+      transform: scale(1.04);
+    }
+
+    .thanks-msg {
+      color: var(--urgency-color);
+      margin-top: 2.5rem;
+      font-size: 1.18rem;
+      display: none;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 1.5em;
+      width: 100vw;
+      text-align: center;
+      z-index: 3;
+      color: #b9b9b9;
+      font-size: 1rem;
+      opacity: 0.8;
+      font-family: 'Lato', sans-serif;
+    }
+    .footer img {
+      width: 32px;
+      height: 32px;
+      margin: 0 0.3em -0.7em 0;
+      filter: grayscale(1) brightness(1.1);
+      vertical-align: middle;
+    }
+
+    @media (max-width: 700px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      .hero-urgency {
+        font-size: 0.95rem;
+      }
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="hero">
     <video class="bg-video" autoplay loop muted playsinline>
-      <source src="mendoza-bg.mp4" type="video/mp4">
+      <source src="mendoza-bg.mp4" type="video/mp4" />
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
-      <div class="hero-title">Devconnect en Mendoza</div>
-      <div class="hero-cta">Bodegas & montaña</div>
+      <h1 class="hero-title">Devconnect en Mendoza</h1>
+      <hr class="hero-divider" />
+      <p class="hero-subtitle">Una experiencia inolvidable entre viñedos y montaña</p>
+      <p class="hero-urgency">Próximamente, solo para los primeros registrados.</p>
       <form id="email-form" autocomplete="off">
-        <input type="email" id="email" name="email" placeholder="Tu email" required>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Tu email"
+          required
+        />
         <button type="submit">Reserva tu lugar</button>
       </form>
-      <div class="urgency-msg">Cupos limitados</div>
-      <div class="thanks-msg" id="thanks-msg">¡Gracias! Pronto tendrás noticias.</div>
+      <p class="thanks-msg" id="thanks-msg">¡Gracias! Pronto tendrás noticias.</p>
     </div>
     <footer class="footer">
-      <img src="devconnect-logo.png" alt="Devconnect">
-      <img src="mendoza-icon.png" alt="Mendoza">
+      <img src="devconnect-logo.png" alt="Devconnect" />
+      <img src="mendoza-icon.png" alt="Mendoza" />
       © 2025 Side Event Mendoza
     </footer>
   </header>
+
+  <!-- Script de captura de mail (igual que antes) -->
   <script>
-    const form=document.getElementById('email-form'),
-          thanks=document.getElementById('thanks-msg');
-    form.addEventListener('submit',e=>{
-      e.preventDefault();form.style.display='none';thanks.style.display='block';
+    const form = document.getElementById('email-form'),
+      thanks = document.getElementById('thanks-msg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.style.display = 'none';
+      thanks.style.display = 'block';
     });
   </script>
 </body>
