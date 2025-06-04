@@ -2,157 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Devconnect Mendoza</title>
+  <title>Devconnect en Mendoza</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reserva tu lugar para el evento más intrigante de Devconnect en Mendoza.">
+  <meta name="description" content="Extiende la Devconnect entre bodegas y montaña en Mendoza. Deja tu mail y entérate primero.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main-bg: #000;
-      --main-text: #fff;
-      --cta: #d9534f;
-      --cta-hover: #c9302c;
-      --urgency: #ffeb3b;
-    }
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: var(--main-bg);
-      color: var(--main-text);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-      overflow: hidden;
-    }
-    .hero {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .bg-video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: 0;
-      filter: brightness(0.85) saturate(1.05);
-    }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(120deg,rgba(0,0,0,0.38) 60%,rgba(30,20,50,0.11) 100%);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 360px;
-      margin: 0 auto;
-      text-align: center;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-      border-radius: 0;
-    }
-    .hero-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -2px;
-      margin-bottom: 1.1em;
-      color: var(--main-text);
-      background: none;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.22);
-      border-radius: 0;
-    }
-    .hero-cta {
-      display: block;
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-bottom: 1.8em;
-      color: var(--urgency);
-      letter-spacing: 0.01em;
-      background: none;
-    }
-    #email-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6em;
-      width: 100%;
-      margin: 0 auto;
-    }
-    #email-form input[type="email"] {
-      padding: 1em 1.2em;
-      font-size: 1.07rem;
-      border-radius: 2em;
-      border: none;
-      background: rgba(0,0,0,0.23);
-      color: var(--main-text);
-      outline: none;
-      box-shadow: 0 2px 14px rgba(220,220,220,0.08);
-      transition: background 0.2s;
-      text-align: center;
-    }
-    #email-form input[type="email"]:focus {
-      background: rgba(32,9,34,0.29);
-    }
-    #email-form button {
-      padding: 1em;
-      background: var(--cta);
-      color: #fff;
-      font-weight: 600;
-      border: none;
-      border-radius: 2em;
-      font-size: 1.07rem;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(217,83,79,0.13);
-      transition: background 0.18s, transform 0.10s;
-    }
-    #email-form button:hover, #email-form button:focus {
-      background: var(--cta-hover);
-      transform: scale(1.04);
-    }
-    .urgency-msg {
-      margin-top: 0.9em;
-      color: var(--urgency);
-      font-size: 1rem;
-      letter-spacing: 0.01em;
-      background: none;
-    }
-    .thanks-msg {
-      color: var(--urgency);
-      margin-top: 2em;
-      font-size: 1.18rem;
-      display: none;
-    }
-    .footer {
-      position: absolute;
-      bottom: 1.5em;
-      width: 100vw;
-      text-align: center;
-      z-index: 3;
-      color: #b9b9b9;
-      font-size: 1rem;
-      opacity: 0.8;
-      letter-spacing: 0.01em;
-      pointer-events: none;
-      background: none;
-    }
-    .footer img {
-      width: 32px; height: 32px;
-      margin: 0 0.3em -0.7em 0;
-      filter: grayscale(1) brightness(1.10);
-      vertical-align: middle;
-    }
-    @media (max-width: 700px) {
-      .hero-title { font-size: 1.3rem;}
-      .hero-cta { font-size: 1.02rem;}
-      .footer { font-size: 0.91rem; }
-    }
+    :root{--main-bg:#000;--main-text:#fff;--cta:#d9534f;--cta-hover:#c9302c;--urgency:#ffeb3b}
+    html,body{height:100%;margin:0;background:var(--main-bg);color:var(--main-text);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      overflow:hidden}
+    .hero{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center}
+    .bg-video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:0;
+      filter:brightness(.85) saturate(1.05)}
+    .overlay{position:absolute;top:0;left:0;width:100vw;height:100vh;
+      background:linear-gradient(120deg,rgba(0,0,0,.38) 60%,rgba(30,20,50,.11) 100%);z-index:1}
+    .hero-content{position:relative;z-index:2;width:100%;max-width:360px;margin:0 auto;text-align:center}
+    .hero-title{font-size:2.5rem;font-weight:700;letter-spacing:-2px;margin-bottom:1.1em;text-shadow:0 2px 16px rgba(0,0,0,.22)}
+    .hero-cta{font-size:1.25rem;font-weight:500;margin-bottom:1.8em;color:var(--urgency)}
+    #email-form{display:flex;flex-direction:column;gap:.6em;width:100%}
+    #email-form input[type="email"]{padding:1em 1.2em;font-size:1.07rem;border-radius:2em;border:none;
+      background:rgba(0,0,0,.23);color:var(--main-text);text-align:center}
+    #email-form input[type="email"]:focus{background:rgba(32,9,34,.29)}
+    #email-form button{padding:1em;background:var(--cta);color:#fff;font-weight:600;border:none;border-radius:2em;
+      font-size:1.07rem;cursor:pointer;transition:background .18s,transform .1s}
+    #email-form button:hover,#email-form button:focus{background:var(--cta-hover);transform:scale(1.04)}
+    .urgency-msg{margin-top:.9em;color:var(--urgency);font-size:1rem}
+    .thanks-msg{color:var(--urgency);margin-top:2em;font-size:1.18rem;display:none}
+    .footer{position:absolute;bottom:1.5em;width:100vw;text-align:center;z-index:3;color:#b9b9b9;font-size:1rem;opacity:.8}
+    .footer img{width:32px;height:32px;margin:0 .3em -.7em 0;filter:grayscale(1) brightness(1.1);vertical-align:middle}
+    @media(max-width:700px){.hero-title{font-size:1.3rem}.hero-cta{font-size:1.02rem}.footer{font-size:.91rem}}
   </style>
 </head>
 <body>
@@ -162,31 +40,26 @@
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
-      <div class="hero-title">Devconnect Mendoza</div>
-      <div class="hero-cta">Reserva tu lugar</div>
+      <div class="hero-title">Devconnect en Mendoza</div>
+      <div class="hero-cta">Bodegas & montaña</div>
       <form id="email-form" autocomplete="off">
-        <input type="email" id="email" name="email" placeholder="Tu email" required autocomplete="off">
-        <button type="submit">Enviar</button>
+        <input type="email" id="email" name="email" placeholder="Tu email" required>
+        <button type="submit">Reserva tu lugar</button>
       </form>
       <div class="urgency-msg">Cupos limitados</div>
-      <div class="thanks-msg" id="thanks-msg">
-        ¡Gracias! Pronto tendrás noticias.
-      </div>
+      <div class="thanks-msg" id="thanks-msg">¡Gracias! Pronto tendrás noticias.</div>
     </div>
     <footer class="footer">
-      <img src="devconnect-logo.png" alt="Devconnect" />
-      <img src="mendoza-icon.png" alt="Mendoza" />
+      <img src="devconnect-logo.png" alt="Devconnect">
+      <img src="mendoza-icon.png" alt="Mendoza">
       © 2025 Side Event Mendoza
     </footer>
   </header>
   <script>
-    // Animación del formulario y mensaje de gracias
-    const form = document.getElementById('email-form');
-    const thanks = document.getElementById('thanks-msg');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      form.style.display = 'none';
-      thanks.style.display = 'block';
+    const form=document.getElementById('email-form'),
+          thanks=document.getElementById('thanks-msg');
+    form.addEventListener('submit',e=>{
+      e.preventDefault();form.style.display='none';thanks.style.display='block';
     });
   </script>
 </body>
